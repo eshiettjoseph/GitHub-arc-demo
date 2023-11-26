@@ -1,0 +1,16 @@
+name: Test
+
+on:
+  # Allows running this workflow manually from the Actions tab
+  workflow_dispatch:
+
+jobs:
+  # Contains a single job called "test"
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      # Checks out repository under $GITHUB_WORKSPACE, so job can access it
+      - uses: actions/checkout@v3
+		
+      - name: Display text
+        run: echo Github self-hosted runner working
